@@ -1,5 +1,6 @@
 """Único return vs múltiples return."""
 
+import re
 from typing import Union
 
 
@@ -14,6 +15,16 @@ def operacion_basica(a: float, b: float, multiplicar: bool) -> Union[float, str]
         - Utilizar IF con ELIF con ELSE.
         - No utilizar AND ni OR.
     """
+    if multiplicar:
+        resultado = a * b
+        print (resultado)
+    elif b == 0:
+        resultado = "Operación no válida"
+        #print(resultado)
+    else:
+        resultado = a / b
+        print (resultado)
+    return resultado
 
 
 # NO MODIFICAR - INICIO
@@ -40,6 +51,14 @@ def operacion_multiple(a: float, b: float, multiplicar: bool) -> Union[float, st
         - No utilizar ELIF ni ELSE.
         - No utilizar AND ni OR.
     """
+    if not multiplicar:
+        resultado = a / b
+        print (resultado)
+    if b == 0:
+        resultado = "Operacion no valida"
+        print(resultado)
+    
+
 
 
 # NO MODIFICAR - INICIO
