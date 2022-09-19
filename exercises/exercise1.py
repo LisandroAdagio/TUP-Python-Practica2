@@ -9,7 +9,12 @@ def maximo_basico(a: float, b: float) -> float:
         - No utilizar ELSE
         - No utilizar la función max
     """
-
+    if a < b:
+        print(f"{a} es menor que {b}")
+        return b
+    elif a > b:
+        print(f"{b} es menor que {a}")
+        return a
 
 # NO MODIFICAR - INICIO
 assert maximo_basico(10, 5) == 10
