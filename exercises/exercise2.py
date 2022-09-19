@@ -2,6 +2,9 @@
 """
 
 
+from ast import If
+
+
 def maximo_encadenado(a: float, b: float, c: float) -> float:
     """Toma 3 números y devuelve el máximo.
 
@@ -13,6 +16,18 @@ def maximo_encadenado(a: float, b: float, c: float) -> float:
 
     Referencia: https://docs.python.org/3/reference/expressions.html#comparisons # noqa: E501
     """
+    if max(a, b) < c:
+        print(c)
+        return c
+    if max(a, c) < b:
+        print(b)
+        return b
+    print(a)
+    return a
+       
+        
+    
+         
 
 
 # NO MODIFICAR - INICIO
@@ -37,6 +52,9 @@ def maximo_cuadruple(a: float, b: float, c: float, d: float) -> float:
     """Re-escribir para que tome 4 parámetros, utilizar la función max.
 
     Referencia: https://docs.python.org/3/library/functions.html#max"""
+    maximo = max(a , b , c , d)
+    print(maximo)
+    return maximo
 
 
 # NO MODIFICAR - INICIO
@@ -54,7 +72,9 @@ def maximo_arbitrario(*args) -> float:
     """Re-escribir para que tome una cantidad arbitraria de parámetros.
     Referencia: https://docs.python.org/3/tutorial/controlflow.html#arbitrary-argument-lists # noqa: E501
     """
-
+    maximo = max(*args)
+    print(maximo)
+    return maximo
 
 # NO MODIFICAR - INICIO
 assert maximo_arbitrario(1, 10, 5, -5) == 10
