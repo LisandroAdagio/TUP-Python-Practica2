@@ -1,5 +1,6 @@
 """Type, Comprensión de Listas, Sorted y Filter."""
 
+from ast import Str
 from typing import List, Union
 
 
@@ -12,6 +13,18 @@ def numeros_al_final_basico(lista: List[Union[float, str]]) -> List[Union[float,
         - Utilizar la función type.
         - No utilizar índices.
     """
+    lista1 = []
+    lista2 = []
+    for i in lista :
+        if type(i) == str:
+            lista1.append(i)
+        elif type(i) == int:
+            lista2.append(i)
+    for i in lista2:
+        lista1.append(i)
+    print(lista1)
+    return lista1
+        
 
 
 # NO MODIFICAR - INICIO
@@ -29,6 +42,11 @@ def numeros_al_final_comprension(lista: List[Union[float, str]]) -> List[Union[f
         - No utilizar bucles.
         - Utilizar dos comprensiones de listas.
     """
+    listastr = [i for i in lista if type(i) == str]
+    listaint = [j for j in lista if type(j) == int]
+    listastr = listastr + listaint
+    print (listastr)
+    return listastr
 
 
 # NO MODIFICAR - INICIO
