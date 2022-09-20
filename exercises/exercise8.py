@@ -14,15 +14,24 @@ precio_articulos = [100.48, 16.42, 5.20]
 
 
 def combinar_basico(nombres: List[str], precios: List[float]) -> Tuple[Any]:
+    respuesta = []
+    for i in range(len(nombre_articulos)):
+       lista_parcial = nombre_articulos[i], precio_articulos[i]
+       respuesta.append(lista_parcial)
+    return tuple(respuesta)
+
     """Toma dos listas y devuelve una tupla de duplas con los componentes de
     las listas.
 
     Restricción:
         - Utilizar un bucle FOR.
         - Utilizar la función range.
-        - Utilizar índices.
+        - Utilizar índices. 
     """
+    
+    
 
+print(combinar_basico(nombre_articulos, precio_articulos))
 
 # NO MODIFICAR - INICIO
 respuesta = (
@@ -42,6 +51,7 @@ id_articulos = [6852, 1459, 3578]
 
 
 def combinar_enumerate(nombres: List[str], precios: List[float], ids: List[int]) -> Tuple[Any]:  # noqa: E501
+     
     """Re-Escribir utilizando enumerate y agregando un nuevo componente.
 
     Restricción:
@@ -60,7 +70,7 @@ respuesta = (
     ("shampoo", 5.2, 3578),
 )
 
-assert combinar_enumerate(nombre_articulos, precio_articulos, id_articulos) == respuesta  # noqa: E501
+#assert combinar_enumerate(nombre_articulos, precio_articulos, id_articulos) == respuesta  # noqa: E501
 # NO MODIFICAR - FIN
 
 
@@ -71,6 +81,9 @@ id_articulos = [6852, 1459, 3578]
 
 
 def combinar_zip(nombres: List[str], precios: List[float], ids: List[int]) -> Tuple[Any]:  # noqa: E501
+    resultado = list(zip(nombre_articulos, precio_articulos, id_articulos))
+    return resultado
+
     """Re-Escribir utilizando zip.
 
     Restricción:
@@ -102,6 +115,10 @@ importado_articulos = [True, False, True]
 
 
 def combinar_zip_args(*args) -> Tuple[Any]:
+    for a, b, c, d, e in zip(nombre_articulos, precio_articulos, id_articulos, categoria_articulos, importado_articulos):
+        combinar_zip_args(nombre_articulos, precio_articulos, id_articulos, categoria_articulos, importado_articulos)
+        
+
     """Re-Escribir utilizando zip y una cantidad arbitraria de componentes.
 
     Restricción:

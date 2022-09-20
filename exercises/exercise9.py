@@ -4,6 +4,10 @@ from typing import Iterable
 
 
 def suma_cubo_pares_for(numeros: Iterable[int]) -> int:
+    elevar_cubo = [x**3 for x in lista]
+    pares = [y for y in elevar_cubo if y % 2 == 0]
+    suma_pares = sum(pares)
+    return suma_pares
     """Toma una lista de números, los eleva al cubo, y devuelve la suma de
     los elementos pares.
 
@@ -26,6 +30,9 @@ assert suma_cubo_pares_for([1, 2, 3, 4, 5, 6]) == 288
 
 
 def suma_cubo_pares_sum_list(numeros: Iterable[int]) -> int:
+    elevacion = [x**3 for x in lista]
+    lista = [1, 2, 3, 4, 5, 6]
+    print(suma_cubo_pares_sum_list(lista))
     """Re-Escribir utilizando comprension de listas (debe resolverse en 1
     línea) y la función built-in sum.
 

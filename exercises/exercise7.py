@@ -61,8 +61,9 @@ def superposicion_any(lista_1: Iterable[Any], lista_2: Iterable[Any]) -> bool:
 
     Referencia: https://docs.python.org/3/library/functions.html#any
     """
-    lista = [i for i in lista_1 if any(lista_1 = )]
-
+    lista = [i for i in lista_1 if any(lista_2 == lista_1) ]
+    print(lista)
+   
 # NO MODIFICAR - INICIO
 test_list = [1, "hello", 35.20]
 assert superposicion_any(test_list, (2, "world", 35.20))
