@@ -53,10 +53,13 @@ def operacion_multiple(a: float, b: float, multiplicar: bool) -> Union[float, st
     """
     if not multiplicar:
         resultado = a / b
-        print (resultado)
+        return(resultado)
     if b == 0:
         resultado = "Operacion no valida"
-        print(resultado)
+        return(resultado)
+    resultado = a * b
+    return(resultado)
+
     
 
 
